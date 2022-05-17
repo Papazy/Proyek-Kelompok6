@@ -7,6 +7,52 @@
 // var global
 int pilihan;
 
+void login(int argc, char user[], char pass[])
+{
+    char login[20] = "habil@gmail", username_input[20], password_input[20], account[50], *string[3], username[50], password[50];
+    int ctrl = 0;
+
+    FILE *fpw = fopen("database/login.bin", "ab");
+    fwrite(login, sizeof(char), sizeof(login) / sizeof(char), fpw);
+    fclose(fpw);
+
+    if (argc != 3)
+    {
+        printf("Login tidak berhasil!\n");
+        printf("Cara penggunaannya: ./fileaplikasi username password");
+    }
+
+    FILE *fpr;
+
+    if ((fpr = fopen("database/login.bin", "rb")) == NULL)
+    {
+        printf("File tidak tersedia!");
+        exit(1);
+    }
+
+    fread(account, sizeof(char), sizeof(account) / sizeof(char), fpr);
+    fclose(fpr);
+
+    string[0] = strtok(account, "@");
+    while (string[ctrl++] != NULL)
+    {
+        string[ctrl] = strtok(NULL, "@");
+    }
+
+    strcpy(username_input, user);
+    strcpy(password_input, pass);
+    strcpy(username, string[0]);
+    strcpy(password, string[1]);
+
+    if ((strcmp(username_input, username) == 0) && (strcmp(password_input, password) == 0))
+    {
+        printf("Selamat anda berhasil login!");
+    }
+    else
+    {
+        printf("Anda gagal login!");
+    }
+}
 
 void kursor(int x, int y);
 void tampilanawal()
@@ -150,9 +196,9 @@ void menu1(){
 }
 
 
-int main(){
+int main(int argc, char *argv[]){
 
-    
+    login(argc, argv[1], argv[2]);
     tampilanawal();
 
     switch (pilihan)
