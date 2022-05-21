@@ -49,7 +49,6 @@ void login(int argc, char user[], char pass[])
     while ((fgets(account, sizeof(account), fpr)) == NULL)
     {
         fread(account, sizeof(char), sizeof(account) / sizeof(char), fpr);
-        printf("\n%s\n", account);
     }
 
     fclose(fpr);
@@ -65,8 +64,6 @@ void login(int argc, char user[], char pass[])
     strcpy(password_input, pass);
     strcpy(username, string[0]);
     strcpy(password, string[1]);
-
-    strcpy(username_data, user);
 
     if ((strcmp(username_input, username) == 0) && (strcmp(password_input, password) == 0))
     {
@@ -97,7 +94,7 @@ void registrasi()
     printf("Masukkan username: ");
     scanf("%s", username);
     printf("Masukkan password: ");
-    scanf(" %s", password);
+    scanf("%s", password);
     
     strcat(username, x);
     printf("\n%s\n", username);
@@ -248,7 +245,6 @@ void menu1(){
     system("cls");
     soal1();
 }
-void data();
 
 // MAIN
 int main(int argc, char *argv[]){
