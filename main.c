@@ -21,7 +21,7 @@ void selesai();
 
 void login(int argc, char user[], char pass[])
 {
-    char login[20] = "habil@gmail", username_input[20], password_input[20], account[50], *string[3], username[50], password[50];
+    char login[20], username_input[20], password_input[20], account[50], *string[3], username[50], password[50];
     int ctrl = 0;
 
     FILE *fpw = fopen("database/login.bin", "ab");
@@ -87,13 +87,13 @@ void login(int argc, char user[], char pass[])
 
 void registrasi()
 {
-    char username[50], password[50];
-    FILE *fpw = fopen("database/login.bin", "wb");
+    char username[50], password[50], x[1] = "@";
+    FILE *fpw = fopen("database/login.bin", "ab");
     printf("Masukkan username: ");
     scanf("%s", username);
     printf("Masukkan password: ");
     scanf(" %s", password);
-    strcat(username, "@");
+    strcat(username, x);
     strcat(username, password);
     // fwrite(&username, sizeof(username), 1, fpw);
     printf("\n%s\n", username);
