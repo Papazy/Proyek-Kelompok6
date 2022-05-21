@@ -1,4 +1,4 @@
-#include<stdio.h>
+v#include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<conio.h>
@@ -20,6 +20,7 @@ void soal2();
 void soal3();
 void soal4();
 void soal5();
+void soal6();
 void selesai();
 
 void login(int argc, char user[], char pass[])
@@ -35,6 +36,9 @@ void login(int argc, char user[], char pass[])
         printf("Login tidak berhasil!\n");
         kursor(30,14);
         printf("Cara penggunaannya: .\\fileaplikasi username password\n\n\n\n\\n\n");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         exit(1);
     }
 
@@ -105,6 +109,10 @@ void registrasi()
     getch();
     system("cls");
     printf("Login dengan format .\\fileaplikasi username password");
+    for(int j = 0; j < 400000000; j++){
+                continue;
+            }
+    
 }
 
 void tampilanawal()
@@ -319,7 +327,9 @@ void soal1(){
     
     if(toupper(cho) == 'C'){
         system("cls");
+        kursor(46,11);
         printf("Selamat jawaban anda benar!!!");
+        kursor(41,13);
         printf("Total uang yang anda dapatkan : Rp 100.000");
         poin += 100;
         for(int j = 0; j < 400000000; j++){
@@ -375,7 +385,9 @@ void soal2(){
     
     if(toupper(cho) == 'C'){
         system("cls");
+        kursor(46,11);
         printf("Selamat jawaban anda benar!!!");
+        kursor(41,13);
         printf("Total uang yang anda dapatkan : Rp 200.000");
         poin += 100;
         for(int j = 0; j < 400000000; j++){
@@ -392,7 +404,9 @@ void soal2(){
         printf("Silahkan Coba Lagi");
         for(int j = 0; j < 400000000; j++){
                 continue;
+
             }
+        exit(1);
         exit(1);
     }
 
@@ -426,7 +440,9 @@ void soal3(){
     
     if(toupper(cho) == 'D'){
         system("cls");
+        kursor(46,11);
         printf("Selamat jawaban anda benar!!!");
+        kursor(41,13);
         printf("Total uang yang anda dapatkan : Rp 300.000");
         for(int j = 0; j < 400000000; j++){
                 continue;
@@ -443,8 +459,10 @@ void soal3(){
         printf("Silahkan Coba Lagi");
         for(int j = 0; j < 400000000; j++){
                 continue;
+
             }
         exit(1);
+       
     }
 
 }
@@ -483,7 +501,9 @@ void soal4(){
     
     if(toupper(cho) == 'B'){
         system("cls");
+        kursor(46,11);
         printf("Selamat jawaban anda benar!!!");
+        kursor(41,13);
         printf("Total uang yang anda dapatkan : Rp 400.000");
         poin += 100;
         for(int j = 0; j < 400000000; j++){
@@ -500,8 +520,10 @@ void soal4(){
         printf("Silahkan Coba Lagi");
         for(int j = 0; j < 400000000; j++){
                 continue;
+
             }
         exit(1);
+       
     }
 
 }
@@ -535,14 +557,16 @@ void soal5(){
     scanf(" %c", &cho);
     
     if(toupper(cho) == 'A'){
-        system("cls");
-        printf("Selamat jawaban anda benar!!!");
-        printf("Total uang yang anda dapatkan : Rp 500.000");
-        for(int j = 0; j < 400000000; j++){
-                continue;
-            }
         poin += 100;
+        system("cls");
+        kursor(46,11);
+        printf("Selamat jawaban anda benar!!!");
+        kursor(41,13);
+        printf("Total uang yang anda dapatkan : Rp 500.000");
         selesai();
+        
+            
+        
     }else{
         system("cls");
         kursor(46,11);
@@ -553,8 +577,10 @@ void soal5(){
         printf("Silahkan Coba Lagi");
         for(int j = 0; j < 400000000; j++){
                 continue;
+
             }
         exit(1);
+        
     }
 
 }
@@ -591,13 +617,14 @@ void soal6(){
     
     if(toupper(cho) == 'C'){
         system("cls");
+        kursor(46,11);
         printf("Selamat jawaban anda benar!!!");
+        kursor(41,13);
         printf("Total uang yang anda dapatkan : Rp 600.000");
         for(int j = 0; j < 400000000; j++){
                 continue;
             }
         poin += 100;
-        soal2();
     }else{
         system("cls");
         kursor(46,11);
@@ -611,6 +638,7 @@ void soal6(){
             }
         exit(1);
     }
+        selesai();
 
 }
 
@@ -620,9 +648,14 @@ void selesai(){
     printf("Anda mendapatkan poin: %d", poin);
     kursor(41,13);
     printf("Anda mendapatkan UANG SENILAI: %d", poin * 1000);
-    for(int j = 0; j < 90000000; j++){
+    kursor(39,15);
+    printf("TERIMA KASIH TELAH MENGGUNAKAN PROGRAM KAMI");
+    kursor(44,16);
+    printf("TUNGGU GAME-GAME KAMI SELANJUTNYA\n\n\n\n\n\n\n\nn\n\n\n\n\n\nn\n\n\n\n\n");
+    for(int j = 0; j < 800000000; j++){
                 continue;
             }
+    getch();
     exit(1);
 }
 
