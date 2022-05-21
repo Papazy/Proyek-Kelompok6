@@ -114,7 +114,7 @@ void registrasi()
 void tampilanawal()
 {
     system("cls");
-    system("color 0B");
+    system("color 3f");
     kursor(t,5);
     printf("=======================================================");
     kursor(t,6);
@@ -262,14 +262,22 @@ int main(int argc, char *argv[]){
         login(argc, argv[1], argv[2]);
     }
     
-
+    system("color 3f");
     tampilanawal();
+    system("color 3f");
 
     switch (pilihan)
     {
     case 1:
         menu1();
         break;
+    case 2:
+        kursor(46,12);
+        printf("Fitur ini Coming Soon!");
+        for(int j = 0; j < 90000000; j++){
+                continue;
+            }
+        tampilanawal();
     case 3:
         system("EXIT");
         exit(1);
@@ -317,14 +325,23 @@ void soal1(){
     if(toupper(cho) == 'C'){
         system("cls");
         printf("Selamat jawaban anda benar!!!");
-        printf("Total uang yang anda dapatkan : Rp 50.000");
+        printf("Total uang yang anda dapatkan : Rp 100.000");
         poin += 100;
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         soal2();
     }else{
         system("cls");
-        printf("Maaf Jawaban Anda Salah!");
-        printf("Uang anda hangus");
-        printf("Silahkan Coba Lagi");
+        kursor(46,11);
+        printf("Maaf Jawaban Anda Salah!\n");
+        kursor(46,12);
+        printf("Uang anda hangus\n");
+        kursor(46,13);
+        printf("Silahkan Coba Lagi\n");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         exit(1);
     }
 
@@ -364,14 +381,23 @@ void soal2(){
     if(toupper(cho) == 'C'){
         system("cls");
         printf("Selamat jawaban anda benar!!!");
-        printf("Total uang yang anda dapatkan : Rp 125.000");
+        printf("Total uang yang anda dapatkan : Rp 200.000");
         poin += 100;
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         soal3();
     }else{
         system("cls");
-        printf("Maaf Jawaban Anda Salah!");
-        printf("Uang anda hangus!!!");
+        kursor(46,11);
+        printf("Maaf Jawaban Anda Salah!\n");
+        kursor(46,12);
+        printf("Uang anda hangus!!!\n");
+        kursor(46,13);
         printf("Silahkan Coba Lagi");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         exit(1);
     }
 
@@ -406,14 +432,23 @@ void soal3(){
     if(toupper(cho) == 'D'){
         system("cls");
         printf("Selamat jawaban anda benar!!!");
-        printf("Total uang yang anda dapatkan : Rp 200.000");
+        printf("Total uang yang anda dapatkan : Rp 300.000");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         poin += 100;
         soal4();
     }else{
         system("cls");
-        printf("Maaf Jawaban Anda Salah!");
-        printf("Uang anda hangus!!!");
+        kursor(46,11);
+        printf("Maaf Jawaban Anda Salah!\n");
+        kursor(46,12);
+        printf("Uang anda hangus!!!\n");
+        kursor(46,13);
         printf("Silahkan Coba Lagi");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         exit(1);
     }
 
@@ -454,14 +489,23 @@ void soal4(){
     if(toupper(cho) == 'B'){
         system("cls");
         printf("Selamat jawaban anda benar!!!");
-        printf("Total uang yang anda dapatkan : Rp 500.000");
+        printf("Total uang yang anda dapatkan : Rp 400.000");
         poin += 100;
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         soal5();
     }else{
         system("cls");
-        printf("Maaf Jawaban Anda Salah!");
-        printf("Uang anda hangus!!!");
+        kursor(46,11);
+        printf("Maaf Jawaban Anda Salah!\n");
+        kursor(46,12);
+        printf("Uang anda hangus!!!\n");
+        kursor(46,13);
         printf("Silahkan Coba Lagi");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         exit(1);
     }
 
@@ -498,14 +542,23 @@ void soal5(){
     if(toupper(cho) == 'A'){
         system("cls");
         printf("Selamat jawaban anda benar!!!");
-        printf("Total uang yang anda dapatkan : Rp 1.000.000");
+        printf("Total uang yang anda dapatkan : Rp 500.000");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         poin += 100;
         selesai();
     }else{
         system("cls");
-        printf("Maaf Jawaban Anda Salah!");
-        printf("Uang anda hangus!!!");
+        kursor(46,11);
+        printf("Maaf Jawaban Anda Salah!\n");
+        kursor(46,12);
+        printf("Uang anda hangus!!!\n");
+        kursor(46,13);
         printf("Silahkan Coba Lagi");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         exit(1);
     }
 
@@ -544,14 +597,23 @@ void soal6(){
     if(toupper(cho) == 'C'){
         system("cls");
         printf("Selamat jawaban anda benar!!!");
-        printf("Total uang yang anda dapatkan : Rp 100.000.000");
+        printf("Total uang yang anda dapatkan : Rp 600.000");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         poin += 100;
         soal2();
     }else{
         system("cls");
-        printf("Maaf Jawaban Anda Salah!");
-        printf("Uang anda hangus");
-        printf("Silahkan Coba Lagi");
+        kursor(46,11);
+        printf("Maaf Jawaban Anda Salah!\n");
+        kursor(46,12);
+        printf("Uang anda hangus\n");
+        kursor(46,13);
+        printf("Silahkan Coba Lagi\n");
+        for(int j = 0; j < 400000000; j++){
+                continue;
+            }
         exit(1);
     }
 
@@ -559,7 +621,14 @@ void soal6(){
 
 void selesai(){
     system("cls");
-    printf("Selesai");
+    kursor(46,12);
+    printf("Anda mendapatkan poin: %d", poin);
+    kursor(41,13);
+    printf("Anda mendapatkan UANG SENILAI: %d", poin * 1000);
+    for(int j = 0; j < 90000000; j++){
+                continue;
+            }
+    exit(1);
 }
 
 
