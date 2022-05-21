@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
+#include<conio.h>
 #include<windows.h>
+
 
 #define t 35
 
@@ -21,12 +24,8 @@ void selesai();
 
 void login(int argc, char user[], char pass[])
 {
-    char login[20], username_input[20], password_input[20], account[50], *string[3], username[50], password[50];
+    char username_input[20], password_input[20], account[50], *string[3], username[50], password[50];
     int ctrl = 0;
-
-    FILE *fpw = fopen("database/login.bin", "ab");
-    fwrite(login, sizeof(char), sizeof(login) / sizeof(char), fpw);
-    fclose(fpw);
 
     if (argc != 3)
     {
@@ -35,7 +34,7 @@ void login(int argc, char user[], char pass[])
         kursor(46,12);
         printf("Login tidak berhasil!\n");
         kursor(30,14);
-        printf("Cara penggunaannya: ./fileaplikasi username password\n\n\n\n\\n\n");
+        printf("Cara penggunaannya: .\\fileaplikasi username password\n\n\n\n\\n\n");
         exit(1);
     }
 
@@ -47,8 +46,14 @@ void login(int argc, char user[], char pass[])
         exit(1);
     }
 
-    fread(account, sizeof(char), sizeof(account) / sizeof(char), fpr);
+    while ((fgets(account, sizeof(account), fpr)) == NULL)
+    {
+        fread(account, sizeof(char), sizeof(account) / sizeof(char), fpr);
+        printf("\n%s\n", account);
+    }
+
     fclose(fpr);
+   
 
     string[0] = strtok(account, "@");
     while (string[ctrl++] != NULL)
@@ -88,14 +93,13 @@ void login(int argc, char user[], char pass[])
 void registrasi()
 {
     char username[50], password[50], x[1] = "@";
-    FILE *fpw = fopen("database/login.bin", "ab");
+    FILE *fpw = fopen("database/login.bin", "wb");
     printf("Masukkan username: ");
     scanf("%s", username);
     printf("Masukkan password: ");
     scanf(" %s", password);
+    
     strcat(username, x);
-    strcat(username, password);
-    // fwrite(&username, sizeof(username), 1, fpw);
     printf("\n%s\n", username);
     fwrite(username, sizeof(char), sizeof(username) / sizeof(char), fpw);
     printf("Data berhasil disimpan!");
@@ -103,7 +107,7 @@ void registrasi()
     
     getch();
     system("cls");
-    printf("Login dengan format .\fileaplikasi username password");
+    printf("Login dengan format .\\fileaplikasi username password");
     login(3, username, password);
 }
 
