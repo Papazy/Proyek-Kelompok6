@@ -105,7 +105,6 @@ void registrasi()
     getch();
     system("cls");
     printf("Login dengan format .\\fileaplikasi username password");
-    login(3, username, password);
 }
 
 void tampilanawal()
