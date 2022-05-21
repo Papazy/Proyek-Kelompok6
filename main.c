@@ -84,6 +84,24 @@ void login(int argc, char user[], char pass[])
         continue;
     }
 }
+
+void registrasi()
+{
+    char username[50], password[50];
+    FILE *fpw = fopen("database/login.bin", "wb");
+    printf("Masukkan username: ");
+    scanf("%s", username);
+    printf("Masukkan password: ");
+    scanf(" %s", password);
+    strcat(username, "@");
+    strcat(username, password);
+    // fwrite(&username, sizeof(username), 1, fpw);
+    printf("\n%s\n", username);
+    fwrite(username, sizeof(char), sizeof(username) / sizeof(char), fpw);
+    printf("Data berhasil disimpan!");
+    fclose(fpw);
+}
+
 void tampilanawal()
 {
     system("cls");
@@ -225,8 +243,15 @@ void data();
 
 // MAIN
 int main(int argc, char *argv[]){
-
-    login(argc, argv[1], argv[2]);
+    if (argc == 1)
+    {
+        system("CLS");
+        registrasi();
+    } else
+    {
+        system("CLS");
+        login(argc, argv[1], argv[2]);
+    }
     
 
     tampilanawal();
