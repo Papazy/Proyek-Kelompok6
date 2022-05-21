@@ -100,6 +100,11 @@ void registrasi()
     fwrite(username, sizeof(char), sizeof(username) / sizeof(char), fpw);
     printf("Data berhasil disimpan!");
     fclose(fpw);
+    
+    getch();
+    system("cls");
+    printf("Login dengan format .\fileaplikasi username password");
+    login(3, username, password);
 }
 
 void tampilanawal()
@@ -245,11 +250,11 @@ void data();
 int main(int argc, char *argv[]){
     if (argc == 1)
     {
-        system("CLS");
+        system("cls");
         registrasi();
     } else
     {
-        system("CLS");
+        system("cls");
         login(argc, argv[1], argv[2]);
     }
     
