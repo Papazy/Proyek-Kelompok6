@@ -507,6 +507,52 @@ void soal5(){
 
 }
 
+void soal6(){
+    char cho;
+    int n = 10  ;
+    system("cls");
+    kursor(n,8);
+    printf("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    kursor(n,9);
+    printf("+                                                   +");
+    kursor(n,10);
+    printf("+                                                   +");
+    kursor(n,11);
+    printf("+                                                   +");
+    kursor(n+3,10);
+    printf("6. Rumus kimia untuk air yang benar ");
+    kursor(n+3,11);
+    printf("   dibawah ini adalah adalah...");
+    kursor(n,12);
+    printf("+                                                   +");
+    kursor(n,13);
+    printf("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+    kursor(n,16);
+    printf("A. H20           B. Co2");
+    kursor(n,17);
+    printf("C. 02            D. H2o");
+
+    kursor(n,19);
+    printf("Masukkan pilihan: ");
+    scanf(" %c", &cho);
+    
+    if(toupper(cho) == 'C'){
+        system("cls");
+        printf("Selamat jawaban anda benar!!!");
+        printf("Total uang yang anda dapatkan : Rp 100.000.000");
+        poin += 100;
+        soal2();
+    }else{
+        system("cls");
+        printf("Maaf Jawaban Anda Salah!");
+        printf("Uang anda hangus");
+        printf("Silahkan Coba Lagi");
+        exit(1);
+    }
+
+}
+
 void selesai(){
     system("cls");
     printf("Selesai");
