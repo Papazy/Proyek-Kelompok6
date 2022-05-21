@@ -110,7 +110,7 @@ void registrasi()
 void tampilanawal()
 {
     system("cls");
-    system("color 3f");
+    system("color 0B");
     kursor(t,5);
     printf("=======================================================");
     kursor(t,6);
